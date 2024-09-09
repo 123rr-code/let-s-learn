@@ -1,0 +1,135 @@
+body
+{
+background-color:b388eb;
+}
+
+.backimg
+{
+body {
+    /* Set the background color */
+    background-color: purple; /* Light grey background color */
+    
+    /* Set the background image */
+    background-image: url('cpbg.jpg'); /* Path to your image file */
+    
+    /* Ensure the background image covers the entire area */
+    background-size: cover;
+    
+    /* Ensure the background image does not repeat */
+    background-repeat: no-repeat;
+    
+    /* Center the background image */
+    background-position: center center;
+    
+    /* Set the background color to be slightly transparent */
+    background-blend-mode: overlay; /* You can use other blend modes depending on the effect you want */
+}
+
+}
+body {
+  font-family: Arial, sans-serif;
+  margin: 2;
+  padding: 0;
+}
+header {
+  background-color: #333;
+  color: #fff;
+  padding: 10px 0;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  text-align: center;
+  z-index: 1000; /* Ensure it's above other content */
+}
+.logo{
+ height: 50px; /* Adjust based on your logo's dimensions */
+justify-content:left;
+border-radius:50%;
+}
+
+.logoo{
+ height: 150px;    
+    justify-content: center;
+border-radius:50%;
+}
+
+header nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+header nav ul li {
+  display: inline;
+  margin: 0 10px;
+}
+
+header nav ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+main {
+  margin-top: 60px; /* Adjust according to header height */
+  margin-bottom: 60px; /* Adjust according to footer height */
+}
+
+footer {
+  background-color: #333;
+  color: #fff;
+  padding: 10px 0;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  text-align: center;
+}
+
+section {
+  text-align: center;
+  margin: 20px auto;
+  max-width: 600px;
+}
+
+.button {
+            display: inline-block;
+            padding: 12px 24px;
+            font-size: 18px;
+            font-weight: bold;
+            color: #ffffff;
+            background: linear-gradient(45deg, #ff6f61, #d83a6b); /* Gradient background */
+            border: none;
+            border-radius: 50px; /* Rounded corners */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow effect */
+            cursor: pointer;
+            text-align: center;
+            text-decoration: none;
+            transition: all 0.3s ease; 
+        }
+.wc{
+color:WHITE;
+font-family: 'Monotype Corsiva', sans-serif;
+font-weight: 900; 
+font-style: italic; 
+font-size: 46px; /* Larger text size */
+line-height: 1; /* Increased line height 
+}
+
+
+
+.bordered-image {
+    border: 2px solid #000000; 
+    border-radius: 8px; 
+    padding: 5px; 
+}
+
+
+p.custom-size {
+    width: 300px;
+    height: 100px;
+    background-color: lightgrey;
+}
+
+main {
+    padding: 2rem;
+    background: #fff;
+}
