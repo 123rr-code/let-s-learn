@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+body{
+background-color:#b388eb;
+}
+.para{
+padding:15px;
+}
+</style>
+    <title>Quiz</title>
+</head>
+<body>
+<header class="sticky-header"><center>
+<nav>
+<ul>
+<img class="logo" src="logo1.jpg"  alt="Company Logo">
+<li><a href="index.html">Home</a></li>
+<li><a href="#about">About</a></li>
+<li><a href="#contact">Contact</a></li>
+ </ul>
+    </nav></center>
+</header><br><br><br><br><br>
+
+<footer class="sticky-footer">
+  <p>Sticky Footer &copy; 2024</p>
+</footer>
+
+<link rel="stylesheet" href="style.css"><div class="para">
+
+    <form id="quizForm">
+        <p>What is the computer?</p>
+        <label><input type="radio" name="q1" value="Machine" required> Machine</label>
+        <label><input type="radio" name="q1" value="wood"> Wood</label>
+        <label><input type="radio" name="q1" value="stone"> Stone</label>
+
+        <p>Who is the father of computer?</p>
+        <label><input type="radio" name="q2" value="Charles Babbage" required> Charles Babbage</label>
+        <label><input type="radio" name="q2" value="Albert Einstein"> Albert Einstein</label>
+        <label><input type="radio" name="q2" value="Nikola Tesla"> Nikola Tesla</label>
+
+        <p>What is the full form of CPU?</p>
+        <label><input type="radio" name="q3" value="Constantly Perplexed Unit" required> Constantly Perplexed Unit</label>
+        <label><input type="radio" name="q3" value="Central Processing Unit"> Central Processing Unit</label>
+        <label><input type="radio" name="q3" value="Center Programming Util"> Center Programming Util</label>
+
+        <p>Which computer is a versatile computer?</p>
+        <label><input type="radio" name="q4" value="Super Computer" required> Super Computer</label>
+        <label><input type="radio" name="q4" value="Mainframe Computer"> Mainframe Computer</label>
+        <label><input type="radio" name="q4" value="Personal Computer"> Personal Computer</label>
+
+        <p>Which device is used to enter text or commands?</p>
+        <label><input type="radio" name="q5" value="Mouse" required> Mouse</label>
+        <label><input type="radio" name="q5" value="Keyboard"> Keyboard</label>
+        <label><input type="radio" name="q5" value="Speaker"> Speaker</label><br><br></div>
+
+        <div class="center"><center>
+            <button type="submit" class="button">Submit</button>
+        </div>
+    </form>
+
+    <script>
+        document.getElementById('quizForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent form from submitting normally
+
+            // Get form data
+            const formData = new FormData(this);
+            const answers = {
+                q1: 'Machine',
+                q2: 'Charles Babbage',
+                q3: 'Central Processing Unit',
+                q4: 'Personal Computer',
+                q5: 'Keyboard'
+            };
+
+            let score = 0;
+            formData.forEach((value, key) => {
+                if (answers[key] === value) {
+                    score++;
+	                }
+            });
+
+            // Store the score in localStorage
+            localStorage.setItem('quizScore', score);
+
+            // Redirect to the results page
+            window.location.href = 'results.html';
+        });
+    </script>
+</body>
+	</html>
