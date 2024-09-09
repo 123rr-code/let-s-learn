@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Results</title>
+<style>
+body{
+background-color:#b388eb;
+}
+</style>
+
+</head>
+<body><center><br><br><br><br><br><br><br>
+    <h1>Quiz Results</h1>
+    <p id="result"></p>
+    <h3>Thank you for participating!</h3>
+
+<header class="sticky-header"><center>
+<nav>
+<ul>
+<img class="logo" src="logo1.jpg"  alt="Company Logo">
+<li><a href="index.html">Home</a></li>
+<li><a href="#about">About</a></li>
+<li><a href="#contact">Contact</a></li>
+ </ul>
+    </nav></center>
+</header><br><br><br><br><br>
+
+<footer class="sticky-footer">
+  <p>Sticky Footer &copy; 2024</p>
+</footer>
+
+<link rel="stylesheet" href="style.css">
+
+</center>
+
+    <script>
+        window.onload = function() {
+            // Retrieve the score from localStorage
+            const score = localStorage.getItem('quizScore');
+            if (score !== null) {
+                document.getElementById('result').textContent = `You scored ${score} out of 5.`;
+                // Clear the score from localStorage
+                localStorage.removeItem('quizScore');
+            } else {
+                document.getElementById('result').textContent = 'No score available.';
+            }
+        }
+    </script>
+</body>
+</html>
